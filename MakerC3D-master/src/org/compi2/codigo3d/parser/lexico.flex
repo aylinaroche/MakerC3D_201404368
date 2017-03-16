@@ -25,6 +25,7 @@ DIV             = "/"
 POT             = "^"
 PAR_IZQ         = "("
 PAR_DER         = ")"
+
 IGUAL_IGUAL     = "=="
 DIFERENTE       = "!="
 MAYOR           = ">"
@@ -34,8 +35,6 @@ MENOR_IGUAL     = "<="
 AND             = "&&"
 OR              = "||"
 NOT             = "!"
-
-
 
 ID              = [A-Za-z][_0-9A-Za-z]*
 ENTERO          = [0-9]+
@@ -56,6 +55,7 @@ ENTER   = [\ \n]
 <YYINITIAL> {POT}	    { return new Symbol(sym.POT, yyline, yycolumn, null); }
 <YYINITIAL> {PAR_IZQ}	    { return new Symbol(sym.PAR_IZQ, yyline, yycolumn, null); }
 <YYINITIAL> {PAR_DER}	    { return new Symbol(sym.PAR_DER, yyline, yycolumn, null); }
+
 <YYINITIAL> {MENOR}         { return new Symbol(sym.MENOR, yyline, yycolumn, null); }
 <YYINITIAL> {MAYOR}         { return new Symbol(sym.MAYOR, yyline, yycolumn, null); }
 <YYINITIAL> {IGUAL_IGUAL}   { return new Symbol(sym.IGUAL_IGUAL, yyline, yycolumn, null); }
